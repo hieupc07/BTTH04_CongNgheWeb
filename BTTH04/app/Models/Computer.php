@@ -10,7 +10,12 @@ class Computer extends Model
     use HasFactory;
 
     protected $fillable = [
-        'computer_name', 'model', 'operating_system', 'processor', 'memory', 'available'
+        'computer_name',
+         'model', 
+         'operating_system', 
+         'processor', 
+         'memory',
+         'available'
     ];
 
     public function issues()

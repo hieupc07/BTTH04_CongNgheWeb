@@ -26,6 +26,7 @@
                 <td>{{ $issue->urgency }}</td>
                 <td>{{ $issue->status }}</td>
                 <td>
+                    <a href="{{ route('issues.show', $issue->id) }}" class="btn btn-info btn-sm">Show</a>
                     <a href="{{ route('issues.edit', $issue) }}" class="btn btn-warning">Edit</a>
                     <form action="{{ route('issues.destroy', $issue) }}" method="POST" style="display:inline-block;">
                         @csrf

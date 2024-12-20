@@ -37,6 +37,10 @@ class IssueController extends Controller
         return redirect()->route('issues.index')->with('success', 'Issue created successfully.');
     }
 
+    public function show(Issue $issue)
+    {
+        return view('issues.show', compact('issue'));
+    }
     public function edit(Issue $issue)
     {
         $computers = Computer::all();
